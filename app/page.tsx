@@ -1,28 +1,42 @@
+"use client";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import Reveal from "./animations/Reveal";
 
 export default function Home() {
   return (
-    <header className="h-[88vh] flex flex-col justify-center items-center gap-10 lg:gap-15">
-      <h1 className="text-center text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black w-5/6 sm:w-4/5 bg-gradient-to-t from-indigo-500 to-sky-100 bg-clip-text text-transparent leading-tight sm:leading-tight md:leading-tight lg:leading-tight">
-        Shop Smart, Build Fast
-      </h1>
-      <div className="w-5/6 sm:w-3/5 lg:w-3/4 flex flex-col-reverse lg:flex-row items-center justify-between font-light gap-10 lg:gap-20">
-        <Button
-          size="lg"
-          variant="secondary"
-          className="py-7 font-bold text-[17px]"
-        >
-          Browse all products
-        </Button>
-        <div className="opacity-50 text-xl lg:text-2xl space-y-5">
-          <p className="text-center lg:text-start">
-            AlphaMart is a vibrant community of digital artists, creators, and
-            developers.
-          </p>
-          <p className="text-center lg:text-start">
-            Buy and sell top-quality digital products, including templates,
-            graphics, logos, and more.
-          </p>
+    <header className="h-auto lg:h-[88vh] p-8 sm:p-12 md:py-4">
+      <div className="space-y-8 lg:space-y-0">
+        <div>
+          <Reveal>
+            <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-[7rem] font-black bg-gradient-to-t from-indigo-500 to-sky-100 bg-clip-text text-transparent leading-tight sm:leading-tight md:leading-tight lg:leading-tight">
+              Shop Smart,
+            </h1>
+          </Reveal>
+          <Reveal>
+            <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-[7rem] font-black bg-gradient-to-t from-indigo-500 to-sky-100 bg-clip-text text-transparent leading-tight sm:leading-tight md:leading-tight lg:leading-tight">
+              Build Fast.
+            </h1>
+          </Reveal>
+        </div>
+        <div className="font-light space-y-6 sm:w-2/3 lg:w-1/2">
+          <Reveal>
+            <p className="opacity-50 sm:text-lg lg:text-2xl">
+              Join vibrant community of digital artists, creators, and
+              developers. Buy and sell top-quality digital products, including
+              templates, graphics, logos, and more.
+            </p>
+          </Reveal>
+          <Reveal
+            whileHover={{
+              scale: 1.1,
+              rotate: "-1.1deg",
+            }}
+          >
+            <button className="py-3 px-6 text-[17px] font-medium bg-[#d1ff62] text-black rounded-md">
+              Browse all products
+            </button>
+          </Reveal>
         </div>
       </div>
     </header>
