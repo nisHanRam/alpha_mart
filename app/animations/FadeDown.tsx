@@ -5,7 +5,7 @@ const FadeDown = ({
   index = 0,
 }: {
   children: JSX.Element;
-  index: number;
+  index?: number;
 }) => {
   return (
     <motion.div
@@ -13,7 +13,6 @@ const FadeDown = ({
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 1 + index * 0.2 }}
       whileHover={{ scale: 1.1, transition: { duration: 0.25 } }}
-      onClick={() => console.log(index)}
     >
       {children}
     </motion.div>

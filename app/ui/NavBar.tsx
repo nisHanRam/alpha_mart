@@ -18,7 +18,7 @@ const NavBar = () => {
             <FadeDown index={index}>
               <Link
                 href={item.href}
-                className="opacity-50 hover:opacity-100 hover:bg-secondary py-2 px-4 rounded-md"
+                className="opacity-50 hover:opacity-100 hover:bg-muted py-2 px-4 rounded-md"
               >
                 {item.name}
               </Link>

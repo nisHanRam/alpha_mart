@@ -5,7 +5,7 @@ import { motion, useInView, useAnimation } from "framer-motion";
 
 interface Props {
   children: JSX.Element;
-  width: "w-fit" | "w-full";
+  width?: "w-fit" | "w-full";
   whileHover?: {
     scale: number;
     rotate: string;
